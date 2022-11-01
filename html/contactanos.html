@@ -46,36 +46,18 @@
                             </td>
                             <td>
                                 Consulta inicial <br>
-                                <input type="text" name="consulta" placeholder="¿Tienes alguna pregunta?">
+                                <textarea name="consulta" onkeyup="countChars(this)" id="cant"></textarea>
+                                <p id="charNum"> 0 caracteres</p>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="derecha">
                     <input type="reset" name="Borrar" value="Borrar datos" class="boton">
-                    <input type="submit" name="Enviar" value="Confirmar" class="boton" onclick="verificar()">
+                    <input type="submit" name="Enviar" value="Confirmar" class="boton" onclick="return verificar()">
                 </div>
             </form>
         </div>
-        <script>
-            function verificar() {
-                let name = document.getElementById('name').value;
-                let surname = document.getElementById('surname').value;
-                let mail = document.getElementById('mail').value;
-                let cel = document.getElementById('cel').value;
-                if (name.length < 1) {
-                    alert('Falta rellenar el nombre');
-                }
-                if (surname.length < 1) {
-                    alert('Falta rellenar el apellido');
-                }
-                if (mail.length < 1) {
-                    alert('Falta rellenar el email');
-                }
-                if (cel.length < 1) {
-                    alert('Falta el numero de telefono');
-                }
-            }
-        </script>
+        <script src="../js/Contacto.js"></script>
     </body>
 </html>
